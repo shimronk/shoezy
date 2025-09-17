@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shoezy</title>
+
+  <link href="css/bootstrap-4.4.1.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="css/shoes.css" rel="stylesheet" />
+
+  <style>
+    body {
+      overflow-x: hidden;
+    }
+	   body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .contact-section {
+      padding: 60px 0;
+    }
+    .contact-card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .contact-card:hover {
+      transform: translateY(-5px);
+    }
+    .card-icon {
+      font-size: 40px;
+      color: #007bff;
+      margin-bottom: 15px;
+    }
+    .contact-info h5 {
+      font-weight: bold;
+    }
+    .contact-info i {
+      color: #007bff;
+      margin-right: 10px;
+    }
+  
+  </style>
+</head>
+<?php
+if (session_status() === PHP_SESSION_NONE) { session_start(); }
+require_once __DIR__ . '/../db.php';      // only if the page queries DB
+include __DIR__ . '/../navbar.php';       // navbar from project root
+?>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand bg-light" href="#">
+      <img src="images/L2-removebg.png" alt="Shoezy Logo" style="height: 55px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse dflex justify-content-center" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item ml-3"><a class="nav-link" href="Navbar.html">Home</a></li>
+        <li class="nav-item ml-3"><a class="nav-link" href="Men.php">Men</a></li>
+        <li class="nav-item ml-3"><a class="nav-link" href="Women.php">Women</a></li>
+        <li class="nav-item ml-3"><a class="nav-link" href="Sport.php">Sport</a></li>
+		<li class="nav-item ml-3"><a class="nav-link" href="Kids.php">Kids</a></li>
+        <li class="nav-item ml-3"><a class="nav-link" href="About.php">About Us</a></li>
+        <li class="nav-item "><a class="nav-link" href="Contact.php">Contact Us</a></li>
+      </ul>
+
+    </div>
+  	<div class="nav-icon" >
+		  	<i class="fa fa-shopping-cart p-1"></i>
+	  		<i class="fa-solid fa-bell p-1"></i>
+			<i class="fa fa-user p-1"></i>
+		</div>
+  </div>
+</nav><br>
+	
+  <section class="contact-section">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Us</h2>
+      <p class="text-center mb-5">
+        We’re always happy to hear from you! Whether you have a question, need help with your order, 
+        or simply want to share feedback, the Shoezy team is here to assist you. 
+        Reach out using the details below or visit us — we’re glad to help!
+      </p>
+
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card contact-card h-100 text-center p-4">
+            <div class="card-body">
+              <i class="fas fa-phone-alt card-icon"></i>
+              <h5>PHONE</h5>
+              <p class="mt-3 mb-1"><strong>+94 72 620 999</strong></p>
+              <p>Mon to Sun, 5 AM – 8 PM PT</p>
+              <a href="tel:+9472620999" class="btn btn-outline-primary mt-2">Call Us</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card contact-card h-100 text-center p-4">
+            <div class="card-body">
+              <i class="fas fa-comments card-icon"></i>
+              <h5>CHAT</h5>
+              <p class="mt-3">Questions? We’ve got answers.</p>
+              <p>Chat 24/7 with our virtual assistant or a live agent.</p>
+              <p>Agent hours: Mon–Sun, 5 AM – 8 PM PT</p>
+              <a href="#" class="btn btn-outline-primary mt-2">Open Chat</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8">
+          <div class="card contact-card bg-white p-4">
+            <div class="contact-info">
+              <p><i class="fas fa-map-marker-alt"></i><strong>Address:</strong> Shoezy HQ, No. 25, High Street, Colombo 07, Sri Lanka</p>
+              <p><i class="fas fa-envelope"></i><strong>Email:</strong> walkwithus@shoezy.com</p>
+              <p><i class="fas fa-phone-square-alt"></i><strong>Phone:</strong> +94 72 620 999</p>
+              <p><i class="fas fa-clock"></i><strong>Support Hours:</strong> Monday to Saturday, 9:00 AM – 6:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+        <footer class="text-white" style="background-color: #111;">
+  <div class="container p-4">
+    <div class="row text-center text-md-start">
+      <div class="col-md-4 mb-3">
+        <h6><strong>Shoezy</strong></h6>
+        <p>Find your perfect pair. Step up with Shoezy today.</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h6><strong>Quick Links</strong></h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white">Home</a></li>
+          <li><a href="#" class="text-white">Contact Us</a></li>
+          <li><a href="#" class="text-white">About Us</a></li>
+          <li><a href="#" class="text-white">Feedback</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h6><strong>Contact</strong></h6>
+        <p><em>Email:</em> walkwithus@shoezy.com</p>
+        <p ><em>Phone:</em> +94 72 620 999</p>
+        <div class="justify-content-center justify-content-md-start " >
+          <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-discord"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(255,255,255,0.05);">
+    © 2025 Shoezy | Designed for your journey. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>	
+	
+	
